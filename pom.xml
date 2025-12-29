@@ -5,7 +5,7 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
+    <groupId>com.sbmm</groupId>
     <artifactId>elo-calculator</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -36,7 +36,7 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>com.example.elocalculator.Main</mainClass>
+                    <mainClass>com.sbmm.elocalculator.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>

@@ -77,7 +77,7 @@ All system parameters are centralized in `Config.java` with detailed documentati
 ## Project Structure
 
 ```
-src/main/java/com/example/elocalculator/
+src/main/java/com/sbmm/elocalculator/
 ├── Main.java                      # Application entry point, command-line handling
 ├── InteractiveMenuHandler.java    # Interactive menu system
 ├── config/
@@ -179,16 +179,16 @@ mvn exec:java -Dexec.args="--live {json_data}"
 ### Manual Compilation
 ```bash
 # Compile all classes
-javac -cp "path/to/gson.jar" src/main/java/com/example/elocalculator/*.java
+javac -cp "path/to/gson.jar" src/main/java/com/sbmm/elocalculator/*.java
 
 # Run the application
-java -cp "src/main/java:path/to/gson.jar" com.example.elocalculator.Main
+java -cp "src/main/java:path/to/gson.jar" com.sbmm.elocalculator.Main
 
 # View player history
-java -cp "src/main/java:path/to/gson.jar" com.example.elocalculator.Main --history "PlayerName"
+java -cp "src/main/java:path/to/gson.jar" com.sbmm.elocalculator.Main --history "PlayerName"
 
 # View player summary
-java -cp "src/main/java:path/to/gson.jar" com.example.elocalculator.Main --summary "PlayerName"
+java -cp "src/main/java:path/to/gson.jar" com.sbmm.elocalculator.Main --summary "PlayerName"
 ```
 
 ## Command Line Options
@@ -364,3 +364,4 @@ When contributing:
 
 
 - **v0.1**: Initial implementation
+
