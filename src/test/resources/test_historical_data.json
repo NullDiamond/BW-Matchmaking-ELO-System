@@ -1,0 +1,56 @@
+{
+  "cc9dcff9-fbbd-4682-8854-137c7a2b2171": {
+    "name": "___TestProfessionalPlayer",
+    "modes": {
+      "solo": {
+        "elo": 1837.4,
+        "games": 221,
+        "avgPerformance": 1.347,
+        "bedBreaks": 221,
+        "kills": 623,
+        "deaths": 143,
+        "finalKills": 213,
+        "victories": 213,
+        "invalidGames": 0,
+        "invalidWins": 0
+      }
+    },
+    "globalElo": 1911.0
+  },
+  "test-player-1": {
+    "name": "Alice",
+    "modes": {
+      "solo": {
+        "elo": 1250.0,
+        "games": 10,
+        "avgPerformance": 1.2,
+        "bedBreaks": 5,
+        "kills": 20,
+        "deaths": 15,
+        "finalKills": 2,
+        "victories": 6,
+        "invalidGames": 0,
+        "invalidWins": 0
+      }
+    },
+    "globalElo": 1250.0
+  },
+  "test-player-2": {
+    "name": "Bob",
+    "modes": {
+      "duo": {
+        "elo": 1300.0,
+        "games": 8,
+        "avgPerformance": 1.1,
+        "bedBreaks": 3,
+        "kills": 16,
+        "deaths": 12,
+        "finalKills": 1,
+        "victories": 5,
+        "invalidGames": 0,
+        "invalidWins": 0
+      }
+    },
+    "globalElo": 1300.0
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "TEST_LIVE_MATCH_1": {
+    "winner": "Red",
+    "map": "Test Map",
+    "lobby_id": "BEDM2",
+    "total_players": 8,
+    "duration": 600,
+    "unix_time": 1842379443796,
+    "teams": {
+      "Red": [
+        {"uuid": "test-player-1", "name": "___Alice"},
+        {"uuid": "new-player-1", "name": "___Diana"},
+        {"uuid": "new-player-2", "name": "___Eve"},
+        {"uuid": "new-player-3", "name": "___Frank"}
+      ],
+      "Yellow": [
+        {"uuid": "test-player-2", "name": "___Bob"},
+        {"uuid": "existing-player-1", "name": "___Charlie"},
+        {"uuid": "new-player-4", "name": "___Grace"},
+        {"uuid": "new-player-5", "name": "___Henry"}
+      ]
+    },
+    "player_stats": {
+      "test-player-1": {
+        "kills": 3,
+        "deaths": 1,
+        "bed_breaks": 2,
+        "final_kills": 1
+      },
+      "new-player-1": {
+        "kills": 2,
+        "deaths": 2,
+        "bed_breaks": 1,
+        "final_kills": 0
+      },
+      "new-player-2": {
+        "kills": 1,
+        "deaths": 3,
+        "bed_breaks": 0,
+        "final_kills": 0
+      },
+      "new-player-3": {
+        "kills": 0,
+        "deaths": 2,
+        "bed_breaks": 0,
+        "final_kills": 0
+      },
+      "test-player-2": {
+        "kills": 2,
+        "deaths": 2,
+        "bed_breaks": 1,
+        "final_kills": 0
+      },
+      "existing-player-1": {
+        "kills": 1,
+        "deaths": 3,
+        "bed_breaks": 0,
+        "final_kills": 0
+      },
+      "new-player-4": {
+        "kills": 1,
+        "deaths": 1,
+        "bed_breaks": 0,
+        "final_kills": 0
+      },
+      "new-player-5": {
+        "kills": 0,
+        "deaths": 4,
+        "bed_breaks": 0,
+        "final_kills": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+# Compiled class files
+*.class
+
+# Maven target directory
+target/
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional Maven files
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Maven local repository (should not be committed)
+.m2/
+
+# ============================================================================
+# PRIVACY PROTECTION - DO NOT COMMIT REAL PLAYER DATA
+# ============================================================================
+
+# Real player data and leaderboards (contains personal information)
+data/input/scraped_games.json
+data/config/player_uuid_map.json
+data/output/zero_sum_elo_java.json
+data/temp/elo_history.json
+data/temp/last_5_games.json
+data/temp/live_adjusted_mega_elo.json
+data/temp/recent_snapshots.json
+data/output/leaderboards_java/
+data/temp/live_mega_leaderboard.json
+data/temp/processed_live_game_ids.json
+data/temp/processed_game_ids.json
+data/config/blacklisted_game_ids.json
+data/temp/invalid_games_java.json
+data/**/*.bak
+
+# Log files that may contain player information
+data/lobby_discrepancies_java.json
+data/config/legacy_top_players.json
+
+# ============================================================================
+# DEVELOPMENT FILES - NOT PART OF REPOSITORY
+# ============================================================================
+
+# Compilation guide (development aid)
+COMPILATION_README.md
+
+# Maven binaries (should be downloaded by users)
+apache-maven-*/
+*.zip
+
+# Standalone JARs (should be managed by Maven)
+*.jar
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.old
+
+# Debug and output files
+debug_output*.txt
+input.txt
+output.txt
+test_output.txt
+
+# Temporary utility scripts
+PrintTop100Adjusted.java
+PrintTop100Adjusted.class
+
+# Python virtual environment
+.venv/
+
+# IDE settings
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr

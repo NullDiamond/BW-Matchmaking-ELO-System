@@ -1,0 +1,176 @@
+{
+  "SAMPLE_GAME_001": {
+    "winner": "Blue",
+    "map": "SampleMap",
+    "lobby_id": "BEDF123456",
+    "total_players": 8,
+    "duration": 1200,
+    "unix_time": 1842379443796,
+    "teams": {
+      "Blue": [
+        "sample-uuid-blue-1",
+        "sample-uuid-blue-2",
+        "sample-uuid-blue-3",
+        "sample-uuid-blue-4"
+      ],
+      "Red": [
+        "sample-uuid-red-1",
+        "sample-uuid-red-2",
+        "sample-uuid-red-3",
+        "sample-uuid-red-4"
+      ]
+    },
+    "player_stats": {
+      "sample-uuid-blue-1": {
+        "kills": 15,
+        "deaths": 8,
+        "bed_breaks": 2,
+        "final_kills": 1
+      },
+      "sample-uuid-blue-2": {
+        "kills": 12,
+        "deaths": 6,
+        "bed_breaks": 1,
+        "final_kills": 0
+      },
+      "sample-uuid-blue-3": {
+        "kills": 8,
+        "deaths": 10,
+        "bed_breaks": 0,
+        "final_kills": 0
+      },
+      "sample-uuid-blue-4": {
+        "kills": 10,
+        "deaths": 7,
+        "bed_breaks": 1,
+        "final_kills": 0
+      },
+      "sample-uuid-red-1": {
+        "kills": 6,
+        "deaths": 12,
+        "bed_breaks": 0,
+        "final_kills": 0
+      },
+      "sample-uuid-red-2": {
+        "kills": 9,
+        "deaths": 9,
+        "bed_breaks": 0,
+        "final_kills": 0
+      },
+      "sample-uuid-red-3": {
+        "kills": 7,
+        "deaths": 11,
+        "bed_breaks": 0,
+        "final_kills": 0
+      },
+      "sample-uuid-red-4": {
+        "kills": 11,
+        "deaths": 8,
+        "bed_breaks": 1,
+        "final_kills": 0
+      }
+    }
+  },
+  "SAMPLE_GAME_002": {
+    "winner": "Green",
+    "map": "AnotherMap",
+    "lobby_id": "BEDT789012",
+    "total_players": 6,
+    "duration": 950,
+    "unix_time": 1642379500000,
+    "teams": {
+      "Green": [
+        "sample-uuid-green-1",
+        "sample-uuid-green-2",
+        "sample-uuid-green-3"
+      ],
+      "Yellow": [
+        "sample-uuid-yellow-1",
+        "sample-uuid-yellow-2",
+        "sample-uuid-yellow-3"
+      ]
+    },
+    "player_stats": {
+      "sample-uuid-green-1": {
+        "kills": 18,
+        "deaths": 5,
+        "bed_breaks": 3,
+        "final_kills": 2
+      },
+      "sample-uuid-green-2": {
+        "kills": 14,
+        "deaths": 7,
+        "bed_breaks": 2,
+        "final_kills": 1
+      },
+      "sample-uuid-green-3": {
+        "kills": 9,
+        "deaths": 9,
+        "bed_breaks": 1,
+        "final_kills": 0
+      },
+      "sample-uuid-yellow-1": {
+        "kills": 8,
+        "deaths": 13,
+        "bed_breaks": 0,
+        "final_kills": 0
+      },
+      "sample-uuid-yellow-2": {
+        "kills": 12,
+        "deaths": 10,
+        "bed_breaks": 1,
+        "final_kills": 0
+      },
+      "sample-uuid-yellow-3": {
+        "kills": 6,
+        "deaths": 14,
+        "bed_breaks": 0,
+        "final_kills": 0
+      }
+    }
+  },
+  "SAMPLE_GAME_003": {
+    "winner": "Tie",
+    "map": "TieMap",
+    "lobby_id": "BEDD345678",
+    "total_players": 4,
+    "duration": 800,
+    "unix_time": 1642379600000,
+    "teams": {
+      "Purple": [
+        "sample-uuid-purple-1",
+        "sample-uuid-purple-2"
+      ],
+      "Orange": [
+        "sample-uuid-orange-1",
+        "sample-uuid-orange-2"
+      ]
+    },
+    "player_stats": {
+      "sample-uuid-purple-1": {
+        "kills": 5,
+        "deaths": 5,
+        "bed_breaks": 0,
+        "final_kills": 0
+      },
+      "sample-uuid-purple-2": {
+        "kills": 4,
+        "deaths": 6,
+        "bed_breaks": 0,
+        "final_kills": 0
+      },
+      "sample-uuid-orange-1": {
+        "kills": 6,
+        "deaths": 4,
+        "bed_breaks": 0,
+        "final_kills": 0
+      },
+      "sample-uuid-orange-2": {
+        "kills": 5,
+        "deaths": 5,
+        "bed_breaks": 0,
+        "final_kills": 0
+      }
+    }
+  }
+}
