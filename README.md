@@ -362,8 +362,5 @@ When contributing:
 
 ## Version History
 
-- **v5.0**: Zero-sum performance system with multi-mode support, activity threshold logging for transparency
-- **v4.0**: Previous version with performance modifiers
-- **v3.0**: Basic multi-team ELO implementation
-- **v2.0**: Duo mode support
-- **v1.0**: Initial solo mode implementation
+
+- **v0.1**: Initial implementation
