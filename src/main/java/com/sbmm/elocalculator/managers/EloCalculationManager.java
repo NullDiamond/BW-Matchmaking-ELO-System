@@ -13,7 +13,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * Facade class that orchestrates ELO calculations and data processing.
+ * Class for ELO calculations and data processing.
  * Delegates to specialized managers for different operations.
  * 
  * This class provides a unified API for the application while internally
