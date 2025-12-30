@@ -25,11 +25,6 @@ public class EloChange {
     public double getNormalizedPerformanceScore() {
         return normalizedPerformanceScore;
     }
-    
-    // Keep for backward compatibility
-    public double getPerformanceScore() {
-        return normalizedPerformanceScore;
-    }
 }
 
 
