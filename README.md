@@ -14,7 +14,7 @@ A sophisticated ELO rating system for Minecraft Bedwars that implements zero-sum
 
 ### Prerequisites
 - **Java 21** or higher
-- **Maven 3.6+** (or use the provided Maven wrapper)
+- **Maven 3.6+**
 
 ### Setup
 1. **Clone the repository:**
