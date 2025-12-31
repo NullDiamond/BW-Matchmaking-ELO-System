@@ -198,28 +198,7 @@ public class EloCalculator {
         }
 
         PlayerStats stats = gameData.getPlayer_stats().get(playerUuid);
-
-        // Get comparison group (teammates for team modes, all other players for solo)
-        List<String> teammates = teamPlayers.stream()
-            .filter(uuid -> !uuid.equals(playerUuid))
-            .collect(Collectors.toList());
-
-        // For solo mode (no teammates), compare against all other players in the game
-        boolean isSoloMode = teammates.isEmpty();
-        List<String> comparisonGroup;
-
-        if (isSoloMode) {
-            comparisonGroup = gameData.getPlayer_stats().keySet().stream()
-                .filter(uuid -> !uuid.equals(playerUuid))
-                .collect(Collectors.toList());
-        } else {
-            comparisonGroup = teammates;
-        }
-
-        if (comparisonGroup.isEmpty()) {
-            return 1.0;
-        }
-
+        
         // Use mode-specific weights
         double weightBeds = isMega ? Config.WEIGHT_BED_BREAKS_MEGA : Config.WEIGHT_BED_BREAKS;
         double weightKd = isMega ? Config.WEIGHT_KD_MEGA : Config.WEIGHT_KD;

@@ -82,13 +82,6 @@ public final class Config {
      */
     public static final double K_FACTOR_FOURS = 40.0;
 
-    /**
-     * Adjustment factor for team size in ELO calculations.
-     * Reduces the impact of larger teams to prevent rating inflation.
-     * Default: 0.15
-     */
-    public static final double TEAM_SIZE_ADJUSTMENT = 0.2;
-
     // ============================================================================
     // ITERATION SETTINGS
     // ============================================================================
