@@ -1,4 +1,4 @@
-# Bedwars ELO Calculator v0.1
+# Bedwars ELO Calculator v0.2
 
 A sophisticated ELO rating system for Minecraft Bedwars that implements zero-sum performance-based calculations across multiple game modes.
 
