@@ -75,7 +75,7 @@ public class CoreConfig {
     public double eloBracketSize = 100.0;
 
     /** Initial target ELO difference for balanced teams */
-    public double targetEloDifference = 20.0;
+    public double targetEloDifference = 5.0;
 
     /** Threshold increment per balancing attempt */
     public double thresholdIncrement = 10.0;
