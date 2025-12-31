@@ -86,9 +86,9 @@ public class CoreConfig {
     /** 
      * Weight multiplier for Mega mode games when calculating adjusted ELO.
      * Higher values give more importance to Mega ELO in team balancing.
-     * Default of 4.0 means 1 Mega game counts as 4 regular games for ELO weighting.
+     * Default of 2.0 means 1 Mega game counts as 2 regular games for ELO weighting.
      */
-    public double megaWeight = 4.0;
+    public double megaWeight = 2.0;
 
     // ============================================================================
     // GAME VALIDATION SETTINGS
