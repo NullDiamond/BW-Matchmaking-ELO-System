@@ -42,6 +42,76 @@ The application will automatically process the sample games and generate leaderb
 
 **Note:** The `data/` directory contains sample data files for testing. For real usage, you'll need to provide your own game data files. The `.gitignore` file excludes real player data to protect privacy.
 
+---
+
+## Core API (Embeddable Library)
+
+The **CORE module** is a lightweight, standalone ELO system designed for embedding in game servers, while the full version is designed for heavier and more verbose testing
+
+### Core Features
+- **In-memory only** — No file I/O, no external dependencies
+- **Real-time matchmaking** — Fast team balancing and ELO calculations
+- **Multi-mode support** — Separate ELO for SOLO, DUO, TRIO, FOURS, MEGA
+- **Undo support** — Roll back recent games if needed
+
+### Core Package Structure
+
+```
+src/main/java/com/nulldiamond/elocalculator/core/
+├── CoreAPI.java              # Main entry point (use this!)
+├── CoreConfig.java           # Configuration settings
+├── CoreEloSystem.java        # Internal system orchestrator
+├── CoreEloCalculator.java    # ELO calculation algorithms
+├── CoreTeamBalancer.java     # Team balancing algorithms  
+├── CoreGameValidator.java    # Game validation logic
+├── CoreRealExample.java      # Example with sample data
+└── model/                    # Data models
+    ├── CoreGame.java             # Game with teams and stats
+    ├── CorePlayer.java           # Player with per-mode ELO
+    ├── CoreGameMode.java         # SOLO, DUO, TRIO, FOURS, MEGA
+    ├── CorePlayerStats.java      # Kills, deaths, bed breaks
+    ├── CoreBalanceResult.java    # Team balancing result
+    ├── CoreTeam.java             # Balanced team
+    └── CoreEloChange.java        # ELO change record
+```
+
+### Core Quick Start
+
+```java
+import com.nulldiamond.elocalculator.core.*;
+import com.nulldiamond.elocalculator.core.model.*;
+
+// 1. Create the API
+CoreAPI api = new CoreAPI();
+
+// 2. Register players
+api.registerPlayer("uuid-1", "Alice");
+api.registerPlayer("uuid-2", "Bob");
+
+// 3. Create and add a game
+CoreGame game = new CoreGame("game-001", CoreGameMode.DUO);
+game.addTeam("team1", Arrays.asList("uuid-1", "uuid-2"));
+game.addTeam("team2", Arrays.asList("uuid-3", "uuid-4"));
+game.setWinnerTeam("team1");
+api.addGame(game);
+
+// 4. Query results
+Double aliceElo = api.getPlayerElo("uuid-1", CoreGameMode.DUO);
+
+// 5. Balance teams for matchmaking
+CoreBalanceResult result = api.balanceTeams(playerIds, CoreGameMode.MEGA);
+```
+
+### Running the Core Example
+
+```bash
+mvn exec:java -Dexec.mainClass="com.nulldiamond.elocalculator.core.CoreRealExample"
+```
+
+For full Core API documentation, see [CORE_API.md](CORE_API.md).
+
+---
+
 ## Algorithm Overview
 
 ### Core Principles
@@ -76,15 +146,29 @@ All system parameters are centralized in `Config.java` with detailed documentati
 
 ## Project Structure
 
+The project consists of two main parts:
+
+### 1. Core API (`core/`) - Embeddable Library
+Lightweight, in-memory ELO system for embedding in other applications. See [Core API section](#core-api-embeddable-library) above.
+
+### 2. Full Application (`managers/`, `model/`, etc.) - Complete System
+Full-featured ELO calculator with file I/O, interactive menu, history tracking, and more.
+
 ```
-src/main/java/com/sbmm/elocalculator/
-├── Main.java                      # Application entry point, command-line handling
+src/main/java/com/nulldiamond/elocalculator/
+├── Main.java                      # Application entry point
 ├── InteractiveMenuHandler.java    # Interactive menu system
 ├── config/
-│   └── Config.java                # All system constants and configuration
+│   └── Config.java                # All system constants
+├── core/                          # 🔷 CORE API (embeddable)
+│   ├── CoreAPI.java               # Main entry point
+│   ├── CoreConfig.java            # Configuration
+│   ├── CoreEloCalculator.java     # ELO algorithms
+│   ├── CoreTeamBalancer.java      # Team balancing
+│   └── model/                     # Data models
 ├── managers/                      # Business logic layer
 │   ├── DataManager.java           # Data loading/saving operations
-│   ├── EloCalculationManager.java # Facade for ELO calculations
+│   ├── EloCalculationManager.java # Entry for ELO calculations
 │   ├── EloCalculator.java         # Core ELO algorithm implementation
 │   ├── EloHistoryManager.java     # Player ELO history tracking
 │   ├── EloUtils.java              # ELO calculation utilities
@@ -364,4 +448,5 @@ When contributing:
 
 
 - **v0.1**: Initial implementation
+- **v0.2**: Implementation of Core mode
 

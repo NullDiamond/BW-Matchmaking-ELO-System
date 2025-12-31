@@ -5,7 +5,7 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sbmm</groupId>
+    <groupId>com.nulldiamond</groupId>
     <artifactId>elo-calculator</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -36,8 +36,29 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>com.sbmm.elocalculator.Main</mainClass>
+                    <mainClass>com.nulldiamond.elocalculator.Main</mainClass>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.nulldiamond.elocalculator.Main</mainClass>
+                                </transformer>
+                            </transformers>
+                            <finalName>elo-calculator-fat</finalName>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
