@@ -81,7 +81,7 @@ public class CoreEloCalculator {
             double teamAvgElo = calculateTeamAverageElo(teamPlayers, players, mode);
 
             // Count opponents for this team
-            int numOpponents = (int) allTeams.stream().filter(t -> !t.equals(teamName)).count();
+            int numOpponents = allTeams.size() - 1;
 
             // Calculate expected score against each other team
             for (Map.Entry<String, List<String>> opponentEntry : game.getTeams().entrySet()) {
